@@ -1,0 +1,26 @@
+@media screen and (max-width: 1100px) {
+    .burger-icon {
+        display: block;
+    }
+    .btn-01 {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 1087px) {
+  .box01 {
+    height: 387px;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .why-hire-me {
+    flex-direction: column;
+  }
+  .quad-box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .box01 {
+    width: 40vw;
+  }  
+} 

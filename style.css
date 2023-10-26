@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,200&family=Roboto:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #2d2e32;
+    --main-orange-color-light: #fecd1a;
+    --main-orange-color-dark: #ffaf29;
+    --main-green-color-light: #64f4ab;
+    --main-green-color-dark: #327a56;
+    --main-white-color: #e8e8e8;
+    --main-black-color: #25262a;
+    --main-another-white-color: #fff;
+}
+
+html,
+body {
+    background: var(--main-black-color);
+    /* height: 100%; */
+    /* width: 100%; */
+    margin: auto;
+}
+/* 
+.main {
+    overflow: hidden;
+    padding: 0 1rem;
+} */
+
+/* all styling of header section */
+
+.header-inner {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    margin-right: 18rem;
+}
+
+.navigation nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation nav li {
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+.navigation nav ul li a {
+    color: var(--main-another-white-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.navigation nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+nav a.active::after,
+nav a:focus::after {
+    width: 100%;
+}
+
+/* this will be the responsive page */
+.responsive-page {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    text-align: center;    
+}
+.res-menu {
+    top: 20%;
+    position: relative;
+}
+
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.74);
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+#return-btn {
+    padding: 6px 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #fecd1a;
+}
+
+#return-btn:hover {
+    background-color: #ffaf29;
+    border-radius: 5px;
+}
+
+/* this is the css if burger menu */
+.burger-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    cursor: pointer;
+    margin: 4px 0;
+    border-radius: 15px;
+}
+
+
+
+
+
+.btn-01 {
+    display: flex;
+}
+
+.icon-01 {
+    margin-right: 30px;
+    color: var(--main-orange-color-light);
+    background: #3d3e41;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.icon-01 i {
+    padding: 14px;
+    border: none;
+}
+
+.icon-01:hover {
+    background: var(--main-orange-color-light);
+    color: black;
+}
+
+#universal-btn {
+    padding: 17px 33px;
+    border-radius: 11px;
+    background: linear-gradient(90deg, #ffaf29, #fecd1a);
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    font-size: 1.3rem;
+}
+
+#universal-btn:hover {
+    background: linear-gradient(90deg, #fecd1a, #ffaf29);
+}
+
+.front-page-inner {
+    display: flex;
+}
+
+.text {
+    padding: 10px;
+    margin-top: 3rem;
+}
+
+#front-heading {
+    color: white;
+    font-size: 6vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+#front-paragraph {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.personal-image {
+    margin-right: 12rem;
+    position: relative;
+    display: inline-block;
+}
+
+.personal-image img {
+    border-radius: 3rem;
+    height: 23rem;
+}
+
+.circle {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 36px solid var(--main-green-color-light);
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.circle2 {
+    position: absolute;
+    top: 26%;
+    left: -5%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--main-orange-color-light);
+    z-index: -1;
+}
+
+.circle3 {
+    position: absolute;
+    top: 70%;
+    left: 120%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--main-orange-color-light);
+    z-index: -1;
+}
+
+.why-hire-me {
+    margin-top: 4rem;
+    display: flex;
+}
+
+/* css of box */
+
+.quad-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box01 {
+    width: 23vw;
+    padding: 1.5rem;
+    background: var(--main-bg-color);
+    height: 300px;
+    text-align: center;
+    border-radius: 23px;
+    margin: 1rem;
+}
+
+.box01:hover:hover .inner-icon-child {
+    background: linear-gradient(#427e60, #64f4ab);
+}
+
+.box01:hover {
+    background: linear-gradient(#64f4ab, #427e60);
+    box-shadow: 8px 8px 10px rgba(78, 230, 64, 0.274);
+    transition: 400ms ease-in-out;
+}
+
+.box .inner-icon .inner-icon-child {
+    box-shadow: inherit;
+}
+
+.inner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-icon-child {
+    border: 2px solid var(--main-green-color-light);
+    margin: 10px;
+    width: 60px;
+    border-radius: 100px;
+    height: 60px;
+    
+    background: var(--main-black-color);
+}
+
+/* .inner-icon-child:hover{
+    background: linear-gradient(green,black);
+} */
+.inner-icon-child img {
+    padding: 3px 0 0 0;
+    filter: invert(1);
+}
+
+.inner-text h1 {
+    color: white;
+    font-size: 30px;
+    padding: 30px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inner-text p {
+    color: white;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.why-hire-me-text {
+    padding: 4rem 3rem 1rem 4rem;
+}
+
+#green-text {
+    color: var(--main-green-color-light);
+}
+
+.why-hire-me-text h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.why-hire-me-text p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* project section styling */
+.project01 {
+    margin: 1rem 0;
+}
+
+.project01-inner {
+    display: flex;
+}
+
+.project-text-area {
+    padding: 1rem 2rem;
+}
+
+.project-text-area a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-text-area h1 {
+    padding: 2rem 0;
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.project-text-area p {
+    color: #ecf2fd;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.project-image-area img {
+    height: 23rem;
+    margin: 1rem 5rem;
+    border-radius: 2rem;
+}
+
+/* .project-image-area::before {
+    content: '';
+    position: absolute;
+    left: 677px;
+    width: 37%;
+    height: 66%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotate(170deg);
+    z-index: -1;
+    border-radius: 2rem;
+} */
+
+.view-all-btn {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#view-all {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background: #ecf2fd;
+    color: black;
+    border-radius: 1rem;
+    box-shadow: 8px 7px 16px 0px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+#view-all:hover {
+    background: var(--main-black-color);
+    color: white;
+}
+
+/* My achievement section */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+    /* border-radius: 10px; */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30, 30, 20, 1);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 16rem;
+    width: 13rem;
+    margin: 0.4rem;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.box:nth-child(4) {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+}
+
+.number {
+    font-size: 7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--main-green-color-light);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.circle-yellow {
+    position: absolute;
+    bottom: 245px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    clip-path: ellipse(168% 52% at 52% 0);
+}
+
+.circle-big {
+    position: absolute;
+    left: 12%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 23px solid var(--main-green-color-light);
+    z-index: -1;
+    rotate: -49deg;
+}
+
+/* ceo section styling */
+.ceo-section {
+    margin-top: 8rem;
+}
+
+.ceo-section-inner {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 1rem 4rem;
+}
+
+.ceo-image-area img {
+    height: 19rem;
+    width: 13rem;
+    border-radius: 2rem;
+    margin: 1rem 10rem;
+}
+
+#double-quote {
+    height: 6rem;
+}
+
+#double-quote span {
+    font-size: 9rem;
+    color: #64f4ab;
+}
+
+#quote {
+    color: white;
+    font-size: 2rem;
+    font-family: "Roboto", Helvetica;
+}
+
+#ceo-name {
+    color: var(--main-green-color-light);
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#role {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* work together section styling */
+.container {
+    background-color: var(--main-bg-color);
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+    margin: 5rem auto;
+}
+
+.container-inner {
+    width: 90%;
+    height: 20rem;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+}
+
+
+.container-inner h1 {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+}
+
+.container-inner p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* footer section */
+footer {
+    background: var(--main-bg-color);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.footer-text-section p {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.png-social-icons a img {
+    height: 50px;
+}
+
